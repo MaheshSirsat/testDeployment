@@ -11,5 +11,5 @@ builder:
     - name: ui5-task-zipper
       afterTask: generateCachebusterInfo
       configuration:
-        target: dist
-        flatten: true
+        archiveName: com.deploy
+        includeDependencies: false
