@@ -3,13 +3,13 @@ metadata:
   name: com.deploy
 type: application
 builder:
-  resources:
-    excludes:
-      - /test/**
-      - /localService/**
-  customTasks:
-    - name: ui5-task-zipper
-      afterTask: generateCachebusterInfo
-      configuration:
-        archiveName: com.deploy
-        includeDependencies: false
+   customTasks:
+     - name: ui5-task-zipper
+       afterTask: generateCachebusterInfo
+       configuration:
+         archiveName: fiori-app-deployment
+         includeDependencies: false
+resources:
+   configuration:
+     paths:
+       webapp: webapp
