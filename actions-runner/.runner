@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "MAHESH",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus23.actions.githubusercontent.com/EOeQyngxl5lierOKCqXqbOvcb2VlR5OvLZSxoStTTK6egD1Miq/",
+  "gitHubUrl": "https://github.com/MaheshSirsat/testDeployment",
+  "workFolder": "deploy"
+}

@@ -1,15 +1,15 @@
-# specVersion: "2.5"
-# metadata:
-#   name: com.deploy
-# type: application
-# builder:
-#    customTasks:
-#      - name: ui5-task-zipper
-#        afterTask: generateCachebusterInfo
-#        configuration:
-#          archiveName: fiori-app-deployment
-#          includeDependencies: false
-# resources:
-#    configuration:
-#      paths:
-#        webapp: webapp
+specVersion: "2.5"
+metadata:
+  name: com.deploy
+type: application
+builder:
+   customTasks:
+     - name: ui5-task-zipper
+       afterTask: generateCachebusterInfo
+       configuration:
+         archiveName: fiori-app-deployment
+         includeDependencies: false
+resources:
+   configuration:
+     paths:
+       webapp: webapp
