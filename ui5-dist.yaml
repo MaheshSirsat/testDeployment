@@ -1,0 +1,15 @@
+specVersion: "2.5"
+metadata:
+  name: com.deploy
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-folder
+      afterTask: generateCachebusterInfo
+      configuration:
+        target: dist
+        flatten: true
