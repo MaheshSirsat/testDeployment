@@ -4,12 +4,13 @@ specVersion: "2.6"
 metadata:
   name: com.deploy
 type: application
+
 server:
   customMiddleware:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
-        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ignoreCertError: false
         ui5:
           path:
             - /resources
@@ -25,8 +26,17 @@ server:
         port: 35729
         path: webapp
         delay: 300
+
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
         component: com.deploy
         ui5Theme: sap_horizon
+
+builder:
+  customTasks:
+    - name: ui5-task-zipper
+      afterTask: generateCachebusterInfo
+      configuration:
+        archiveName: fiori-app-deployment
+        includeDependencies: false
