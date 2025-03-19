@@ -32,11 +32,4 @@ server:
       configuration:
         component: com.deploy
         ui5Theme: sap_horizon
-
-builder:
-  customTasks:
-    - name: ui5-task-zipper
-      afterTask: generateCachebusterInfo
-      configuration:
-        archiveName: fiori-app-deployment
-        includeDependencies: false
+ 
